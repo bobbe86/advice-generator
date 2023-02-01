@@ -1,0 +1,216 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background-color: var(--wheat);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+:root {
+    /* --LightCyan: hsl(193, 38%, 86%);
+    --NeonGreen: hsl(150, 100%, 66%);
+    /* Neutral 
+    --GrayishBlue: hsl(217, 19%, 38%);
+    --DarkGrayishBlue: hsl(217, 19%, 24%);
+    --DarkBlue: hsl(218, 23%, 16%);
+    /* Alternate colors 
+    --black-coffee: #3c3644;
+    --duke-blue: #090b9a;
+    --true-blue: #3067c0;
+    --light-steel-blue: #b4c5e4;
+    --ivory: #fbfff0; */
+
+    /* alternate colors #2 */
+    --wheat: #ead2acff;
+    --new-york-pink: #df928eff;
+    --old-rose: #c58882ff;
+    --gainsboro: #d1dedeff;
+    --eerie-black: #1d201fff;
+}
+
+.attribution {
+    color: var(--eerie-black);
+    margin-top: 4rem;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+main {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    height: 270px;
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--old-rose);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+header {
+    font-size: smaller;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    color: var(--eerie-black);
+}
+
+.advice {
+    margin: 1rem 0;
+    font-weight: 800;
+    font-size: 21px;
+    color: var(--gainsboro);
+}
+
+.container {
+    position: absolute;
+    bottom: -50px;
+    left: 100px;
+    width: 100px;
+    height: 100px;
+}
+
+.divider {
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.dice {
+    position: relative;
+    bottom: -40%;
+    left: 42%;
+    color: var(--eerie-black);
+    z-index: 99;
+}
+
+.green-circle {
+    cursor: pointer;
+    position: relative;
+    bottom: 10px;
+    left: 4px;
+    width: 70px;
+    height: 70px;
+    background-color: var(--new-york-pink);
+    border: none;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    z-index: 1;
+}
+
+.green-circle:hover {
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 500ms;
+    box-shadow: var(--eerie-black) 0px 0px 20px 5px;
+}
+
+@media (min-width: 768px) {
+    main {
+        position: relative;
+        min-width: 600px;
+        width: 100%;
+        height: 250px;
+        padding: 1rem;
+        text-align: center;
+        background-color: var(--old-rose);
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+
+    .container {
+        bottom: -15%;
+        left: 42%;
+    }
+
+    .advice{
+        margin: 1rem 0;
+    }
+
+    .dice {
+        bottom: -40%;
+        left: 39%;
+    }
+
+    .green-circle {
+        left: 1%;
+    }
+
+    .divider{
+        width: 100%;
+    }
+}
